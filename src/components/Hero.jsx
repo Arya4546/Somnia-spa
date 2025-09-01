@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import AnimatedBird from "./AnimatedBird";
 
-export default function Hero({ setActivePage }) {
+export default function Hero() {
   return (
     <div className="relative w-full">
       <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-[1.2fr,0.8fr] items-center gap-10">
@@ -18,9 +19,12 @@ export default function Hero({ setActivePage }) {
           </motion.h1>
 
           <div className="flex items-center gap-4">
-            <button className="cartoon-btn" onClick={() => setActivePage("games")}>
+            <Link
+              to="/game1"
+              className="cartoon-btn"
+            >
               Play Mini-Games
-            </button>
+            </Link>
             <span className="px-4 py-2 rounded-2xl bg-white/30 backdrop-blur-md border border-white/40 text-sm text-black">
               Testnet • EVM • 1M+ TPS*
             </span>
