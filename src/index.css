@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Subtle glass card for cartoon look */
+@layer components {
+  .glass {
+    @apply bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl;
+  }
+
+  .cartoon-btn {
+    @apply rounded-2xl px-5 py-3 font-display text-lg tracking-wide drop-shadow-candy
+           bg-candy-yellow text-candy-ink hover:scale-105 active:scale-95 transition-transform;
+  }
+}
+
+/* Wing hinge points (tweak if your PNG art has different pivot) */
+.somnia-left-wing {
+  transform-origin: 72% 26%;
+}
+.somnia-right-wing {
+  transform-origin: 28% 26%;
+}
